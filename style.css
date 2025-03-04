@@ -1,26 +1,65 @@
-header, nav, .seccion, footer {
-    display: block;
-    background-color: bisque;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    display: block;
+header, footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: bisque;
+    text-align: center;
+    padding: 10px;
 }
 
 #logo {
     width: 100px;
 }
 
-h1 {
-    float: right;
-    color: blue;
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(137, 137, 235);
 }
 
-aside {
-    float: right;
-    width: 150px;
-    background-color: cadetblue;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5e5454;
 }
+
 nav ul li {
-    display: inline;
+    float: left;
+    width: 200px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #e9e6e6;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+.content {
+    flex: 1;
+    width: 70%;
+    padding: 20px;
+    height: 70vh;
+    background-color: aquamarine;
+}
+
+.sidebar {
+    flex: 0 1 300px;
+    padding: 20px;
+    height: 70vh;
+    background-color: cadetblue;
 }

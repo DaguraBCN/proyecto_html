@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <img src="https://placehold.co/400" alt="logo" id="logo">
-        <h1>HEADER</h1>
+        <h1>NOMBRE APELLIDO1 APELLIDO2</h1>
+        <h2>Backend Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="#seccion1">seccion 1</a></li>
+                <li><a href="#seccion2">seccion 2</a></li>
+                <li><a href="#seccion3">seccion 3</a></li>
+                <li><a href="#seccion4">seccion 4</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#seccion1">seccion 1</a></li>
-            <li><a href="#seccion2">seccion 2</a></li>
-            <li><a href="#seccion3">seccion 3</a></li>
-            <li><a href="#seccion4">seccion 4</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <aside id="aside">
-            <h1>ASIDE</h1>
-            <p>Contenido Aside</p>
+    <div class="container">
+        <aside class="sidebar">
+            <div>
+                <img src="https://placehold.co/400" alt="logo" id="logo">
+                <h2>Sobre mí</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsam magnam iure sapiente ullam
+                    quasi, architecto unde consequuntur beatae quisquam maxime doloremque, esse nobis earum autem saepe
+                    qui quidem! Laudantium laboriosam et quae reprehenderit commodi obcaecati cupiditate totam fugiat
+                    quisquam dolor molestiae architecto, labore incidunt ratione, optio cum excepturi sit.</p>
+            </div>
         </aside>
-        <section id="seccion1" class="seccion">
-            <article>
-                <h2>SECCION 1</h2>
-                    <p>Contenido seccion 1</p>
-            </article>
-        </section>
-        <section id="seccion2" class="seccion">
-            <article>
-                <h2>SECCION 2</h2>
-                    <p>Contenido seccion 2</p>
-            </article>
-        </section>
-        <section id="seccion3" class="seccion">
-            <article>
-                <h2>SECCION 3</h2>
-                    <p>Contenido seccion 3</p>
-            </article>
-        </section>
-        <section id="seccion4" class="seccion">
-            <article>
-                <h2>SECCION 4</h2>
-                    <p>Contenido seccion 4</p>
-            </article>
-        </section>
-    </main>
+        <main class="content">
 
+            <section id="seccion1" class="seccion">
+                <article>
+                    <h2>FORMACIÓN</h2>
+                    <p>Contenido seccion 1</p>
+                </article>
+            </section>
+            <section id="seccion2" class="seccion">
+                <article>
+                    <h2>PROYECTOS</h2>
+                    <p>Contenido seccion 2</p>
+                </article>
+            </section>
+            <section id="seccion3" class="seccion">
+                <article>
+                    <h2>EXPERIENCIA</h2>
+                    <p>Contenido seccion 3</p>
+                </article>
+            </section>
+            <section id="seccion4" class="seccion">
+                <article>
+                    <h2>CONTACTO</h2>
+                    <form action="">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </article>
+            </section>
+        </main>
+    </div>
     <footer>&copy2025 CP</footer>
 
 
 
 </body>
+
 </html>
