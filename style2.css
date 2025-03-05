@@ -1,0 +1,207 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@layer demo {
+    .stuck-top {
+        container-type: scroll-state;
+        position: sticky;
+        top: 20px;
+
+        >nav {
+            background: var(--surface-document);
+
+            transition:
+                background-color .3s var(--ease-3),
+                box-shadow .3s var(--ease-3),
+                margin .3s var(--ease-spring-3),
+                border-radius .3s var(--ease-3);
+
+            @container scroll-state(stuck: top) {
+                background: var(--surface-1);
+                box-shadow: var(--shadow-5);
+                border-radius: 10px;
+                margin-inline: 20px;
+            }
+        }
+    }
+}
+
+@layer demo.scrollspy {
+    body {
+        timeline-scope: --section-formacion, --section-proyectos, --section-experiencia, --section-contacto, --section-redes;
+    }
+
+    @keyframes highlight {
+
+        25%,
+        50% {
+            border-block-end-color: rgb(255, 16, 143);
+        }
+    }
+
+    nav {
+        >a {
+            animation: highlight linear both;
+            animation-range: cover 20% exit-crossing 50%;
+
+            border-block-end: 3px solid transparent;
+        }
+
+        >a:nth-child(1) {
+            animation-timeline: --section-formacion
+        }
+
+        >a:nth-child(2) {
+            animation-timeline: --section-proyectos
+        }
+
+        >a:nth-child(3) {
+            animation-timeline: --section-experiencia
+        }
+
+        >a:nth-child(4) {
+            animation-timeline: --section-contacto
+        }
+
+        >a:nth-child(5) {
+            animation-timeline: --section-redes
+        }
+    }
+}
+
+@layer demo.support {
+    :root {
+        --surface-document: var(--gray-3);
+        --surface-1: white;
+        --shadow-color: 220 3% 15%;
+        --shadow-strength: 1%;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    html {
+        block-size: 100%;
+        background: var(--surface-document);
+        color: var(--gray-10);
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-block-size: 100%;
+        font-family: system-ui, sans-serif;
+    }
+
+    section {
+        border-block-end: 2px solid #0003;
+    }
+
+    header {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        display: grid;
+        gap: var(--size-5);
+        block-size: 95svh;
+
+        >p {
+            color: var(--gray-8);
+            letter-spacing: var(--font-letterspacing-3);
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: var(--font-size-7);
+        letter-spacing: var(--font-letterspacing-5);
+        text-wrap: balance;
+    }
+
+    .stuck-top {
+        z-index: 1;
+    }
+
+    nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        place-items: center;
+        justify-content: space-between;
+        gap: var(--size-3);
+        padding: var(--size-3);
+
+        font-size: var(--font-size-3);
+
+        @media (width >=520px) {
+            padding: var(--size-5);
+        }
+
+        >a {
+            white-space: nowrap;
+            color: var(--gray-9);
+            text-decoration: none;
+            padding-inline: var(--size-2);
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5e5454;
+}
+
+ul li {
+    float: left;
+    width: 200px;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #e9e6e6;
+    color: black;
+}
+
+footer {
+    display: grid;
+    place-content: center;
+    gap: var(--size-5);
+    padding: var(--size-5);
+    background: var(--gray-3);
+    color: var(--gray-8);
+}
+
+/*
+#logo {
+    width: 400px;
+}
+
+.container {
+    display: flex;
+}
+.content {
+    flex: 1;
+    width: 70%;
+    padding: 20px;
+    height: 70vh;
+    /*background-color: aquamarine;*
+}
+
+.sidebar {
+    flex: 0 1 300px;
+    padding: 20px;
+    height: 70vh;
+    /*background-color: cadetblue;*
+}
+
+*/

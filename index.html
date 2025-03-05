@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
@@ -13,15 +13,31 @@
     <header>
         <h1>NOMBRE APELLIDO1 APELLIDO2</h1>
         <h2>Backend Developer</h2>
+    </header>
+    <div class="stuck-top">
+        <!--   Barra de navegación con style.css --
         <nav>
             <ul>
-                <li><a href="#seccion1">seccion 1</a></li>
-                <li><a href="#seccion2">seccion 2</a></li>
-                <li><a href="#seccion3">seccion 3</a></li>
-                <li><a href="#seccion4">seccion 4</a></li>
+                <li><a href="#formacion">FORMACIÓN</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#experiencia">EXPERIENCIA</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#redes">REDES SOCIALES</a></li>
             </ul>
         </nav>
-    </header>
+        -->
+
+        <!--  Barra de navegación con style2.css  -->
+        <nav>
+            <a href="#formacion">FORMACIÓN</a>
+            <a href="#proyectos">PROYECTOS</a>
+            <a href="#experiencia">EXPERIENCIA</a>
+            <a href="#contacto">CONTACTO</a>
+            <a href="#redes">REDES SOCIALES</a>
+        </nav>
+     <!-- -->
+
+    </div>
     <div class="container">
         <aside class="sidebar">
             <div>
@@ -35,26 +51,26 @@
         </aside>
         <main class="content">
 
-            <section id="seccion1" class="seccion">
-                <article>
+            <section id="formacion" style="view-timeline-name: --section-formacion">
+                <header>
                     <h2>FORMACIÓN</h2>
                     <p>Contenido seccion 1</p>
-                </article>
+                </header>
             </section>
-            <section id="seccion2" class="seccion">
-                <article>
+            <section id="proyectos" style="view-timeline-name: --section-proyectos">
+                <header>
                     <h2>PROYECTOS</h2>
                     <p>Contenido seccion 2</p>
-                </article>
+                </header>
             </section>
-            <section id="seccion3" class="seccion">
-                <article>
+            <section id="experiencia" style="view-timeline-name: --section-experiencia">
+                <header>
                     <h2>EXPERIENCIA</h2>
                     <p>Contenido seccion 3</p>
-                </article>
+                </header>
             </section>
-            <section id="seccion4" class="seccion">
-                <article>
+            <section id="contacto" style="view-timeline-name: --section-contacto">
+                <header>
                     <h2>CONTACTO</h2>
                     <form action="">
                         <label for="nombre">Nombre:</label>
@@ -67,7 +83,17 @@
                         <textarea id="mensaje" name="mensaje" required></textarea>
                         <button type="submit">Enviar</button>
                     </form>
-                </article>
+                </header>
+            </section>
+            <section id="redes" style="view-timeline-name: --section-redes">
+                <header>
+                    <h2>SÍGUENOS EN LAS REDES SOCIALES</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                        <li><a href="https://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </header>
             </section>
         </main>
     </div>
